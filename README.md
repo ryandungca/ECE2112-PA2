@@ -2,10 +2,10 @@
 **Ryan Joseph C. Dungca, 2ECE-D**
 
 This repository contains code for Programming Assignment 2 of the course ECE2112, covering three problems related to _Module 2 - Numpy_. The creation of this code demonstrates the ability to:
-- Create and reshape NumPy arrays using appropriate NumPy functions;
-- Perform vectorized numerical operations on an ndarray;
-- Compute array statistics and use Boolean conditions to select elements; and
-- Save computed NumPy arrays as .npy files.
+- create and reshape NumPy arrays using appropriate NumPy functions;
+- perform vectorized numerical operations on an ndarray;
+- compute array statistics and use Boolean conditions to select elements; and
+- save computed NumPy arrays as .npy files.
 
 To view the code itself, access the related Python notebook file, which is currently yet to be uploaded.
 
