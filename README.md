@@ -20,6 +20,14 @@ After this, the array `X` must be normalized using the provided formula, with th
 
 All the required tests for the problem are then outputted by `print()`. Finally, the array `X_normalized` must be saved to a .npy file of a corresponding name. This is performed by `npy.save("X_normalzed.npy", X_normalized)`, which specifies the file name as the first argument, and the array to be saved as the second argument.
 
+The constructed solution, omitting `import numpy as np` and tests, is:
+```
+np.random.seed(2112)
+X = np.random.randint(10, 101, size=(5, 5))
+X_normalized = (X-np.mean(X))/np.std(X)
+np.save("X_normalized.npy", X_normalized)
+```
+
 # B. Cubes Divisible by 4 Problem
 >_Objective_: Using NumPy, create the first 100 positive integers, cube every element, and reshape the result into a 10 × 10 ndarray named `C`. Thus, `C` begins with 1³ and ends with 100³. Use a Boolean condition on `C` to obtain every cubed value divisible by 4. Store the selected values in `div_by_4`. Preserve NumPy’s normal row-major selection order.
 
@@ -31,6 +39,14 @@ A new array `div_by_4` must then be constructed, containing only every cubed val
 
 All the required tests for the problem are then outputted by `print()`. The tests for `C.shape` and `div_by_4.size` are included, to indicate the correct reshaping of `C` into a 10 × 10 array, and the correct sorting and amount of elements in `div_by_4`, respectively. Finally, using the same method as previously, `npy.save("div_by_4.npy", div_by_4)` saves this array to a correspondingly named .npy file. 
 
+The constructed solution, omitting `import numpy as np` and tests, is:
+```
+C = np.arange(1,101)
+C = np.power(C, 3).reshape(10, 10)
+div_by_4 = C[C%4==0]
+np.save("div_by_4.npy", div_by_4)
+```
+
 # C. Above-Mean Squares Problem
 >_Objective_: Create a 6 × 6 ndarray named `S` containing the squares of the first 36 positive integers in increasing row-major order. Compute the mean of all elements of `S` and store it in `S_mean`. Then use Boolean filtering to select only the elements strictly greater than `S_mean`. Store these values in `above_mean`.
 
@@ -39,6 +55,14 @@ The array `S` is first constructed by `S = np.arange(1, 37).reshape(6, 6)`, whic
 The array `above_mean` is then constructed to include elements of `S` that are above the previously-generated mean `S_mean`, by `above_mean = S[S>S_mean]`. This uses boolean indexing on `S`, with the provided condition that the elements must be greater than `S_mean`.
 
 All required tests for the problem are outputted by `print()`. Included is the test for `above_mean.size`, indicating the correct amount of elements above the generated `S_mean`. The same method for saving an array to a file is then used by `np.save("above_mean.npy", above_mean)`.
+
+The constructed solution, omitting `import numpy as np` and tests, is:
+```
+S = np.arange(1, 37).reshape(6, 6)
+S = np.power(S, 2)
+S_mean = np.mean(S)
+np.save("above_mean.npy", above_mean)
+```
 
 ## History
 - 2026, August 27: File created. Uploaded and linked notebook and related NumPy array files.
