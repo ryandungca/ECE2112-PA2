@@ -34,7 +34,7 @@ All the required tests for the problem are then outputted by `print()`. The test
 # C. Above-Mean Squares Problem
 >_Objective_: Create a 6 × 6 ndarray named `S` containing the squares of the first 36 positive integers in increasing row-major order. Compute the mean of all elements of `S` and store it in `S_mean`. Then use Boolean filtering to select only the elements strictly greater than `S_mean`. Store these values in `above_mean`.
 
-The array `S` is first constructed by `S = np.arange(1, 37).reshape(6, 6)`, which constructs the array of numbers from 1 to 37, but not including 37, with a step value defaulting to 1. The `reshape()` method is then stacked to reshape the constructed array into a 6 × 6 array. The mean of all elements is then computed and stored into the variable `S_mean` by `S_mean = np.mean(S)`.
+The array `S` is first constructed by `S = np.arange(1, 37).reshape(6, 6)`, which constructs the array of numbers from 1 to 37, but not including 37, with a step value defaulting to 1. The `reshape()` method is then stacked to reshape the constructed array into a 6 × 6 array. The elements of the array are then squared by `S = np.power(S, 2)`, or alternatively by `S = S**2`. The mean of all elements is then computed and stored into the variable `S_mean` by `S_mean = np.mean(S)`.
 
 The array `above_mean` is then constructed to include elements of `S` that are above the previously-generated mean `S_mean`, by `above_mean = S[S>S_mean]`. This uses boolean indexing on `S`, with the provided condition that the elements must be greater than `S_mean`.
 
